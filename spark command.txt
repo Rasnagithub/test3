@@ -1,0 +1,55 @@
+1)  !apt-get update
+2)  !apt-get install openjdk-8-jdk-headless -qq > /dev/null
+3)  !wget -q http://apache.osuosl.org/spark/spark-2.4.8/spark-2.4.8-bin-hadoop2.7.tgz
+4)  !tar xf spark-2.4.8-bin-hadoop2.7.tgz
+5)  !pip install -q findspark
+6)  import os
+    os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
+    os.environ["SPARK_HOME"] = "/content/spark-2.4.8-bin-hadoop2.7"
+
+7)  import findspark
+    findspark.init()
+    findspark.find()
+
+8)  from google.colab import drive
+    drive.mount('/content/drive/',force_remount=True)
+
+9)  import pyspark
+
+10) from pyspark.sql import SparkSession
+
+11) spark = SparkSession.builder.appName("Test").getOrCreate()
+
+12) df = spark.read.csv("/content/drive/MyDrive/Python_Batch4/employee.csv",header=True,inferSchema=True)
+
+df.printSchema()
+
+df.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+df = spark.read.csv("/content/drive/MyDrive/Python_Batch4/employee.csv",header=True,inferSchema=True)
+df.printSchema()
+df.show()
