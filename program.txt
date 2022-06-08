@@ -1,0 +1,101 @@
+     ######list####
+
+
+a=[1,2,3,"n","r","k",3.14]
+print(a)
+print([0])
+print([-8])
+print(a[4])
+print(a[3:])
+print(a[0:])
+#access element in range
+print(a[0:3])
+print(a[3:8])
+print(a[-5:-3])
+#method
+a.insert(3,"hello")
+print(a)
+a.append(10)
+print(a)
+b=a.copy()
+a.sort()
+print(a) #only integer and string
+c=[0,15,6,8,5]
+c.sort()
+print(c)
+c.sort(reverse=True)
+print(c)
+print(c.count(1))
+print(c.clear(c))
+print(c.remove(3))#remove value
+#loop apply on list
+for i in c:
+print(i)
+
+
+
+               ### TOUPLE####
+#PYTHON INBUILT DATA TYPE
+#IN TOUPLE WE CAN WRITE MULTIPLE ITEMS IN SINGLE VARIABLE ..ORDERED
+t=(1,2,3,4)#touple creation with bracket
+print(t)
+print(type(t))
+t1=5,6,4,1 #touple creation without bracket
+print(t1)
+print(type(t1))
+T2=("RIYAA")#IT NOT CREATE TOUPLE
+T2=("RIYAA",)#IT CREATE TOUPLE
+
+t3=t1+t2 ##concatation of touple
+print(t3)
+print(len(t3))
+print(t3[3])
+
+
+t4=(t1,t2)  ##nested touple
+print(t4)
+print(len(t3))  #length of touple
+print(t4[0])         ##touple 0 index element print
+print(t4[0][5]) ##touple 0 index is touple and from that touple we print print 4
+
+
+
+#in touple also add we can add hytrogenious element (mix data type)
+touple=(1,2,3,"a","ab","a",4.4,True) ## in touple we can write reapitative element
+
+t=("dinesh",)*10 # we have to print 10 times
+print(t)
+
+## slicing of touple ----------access individual element of touple
+touple=(1,2,3,"a","ab","a",4.4,True)
+print(t[4])  ## positive index access
+print(t[-5])  ##negative index access
+
+print(t[:]) # start and end not deine ...print all touple element
+print(t[0:]) #start define access all element
+print(t[:9])   ##end define access all element
+print(t[3:8])  ## in range element access only positive index
+print(t[3:-1])  ## in range element access only positive index
+
+
+
+
+## method onn touple
+print(t.count(6))
+t.append(6)
+print(t)
+del(t)
+print(t)
+
+a=[1,2,3,4]
+print(type(a))
+
+a=touple(a)  ### a touple converted into list
+print(a)
+print(type(a))
+
+
+a=list(a)     ### a list converted into touple
+print(a)
+print(type(a))
+
